@@ -66,6 +66,7 @@ html > .content {
   top: -2px; /* Fixes extra gap top */
   position: sticky;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 100;
 }
 

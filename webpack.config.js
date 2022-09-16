@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
+    assetModuleFilename: '[name][ext]',
     clean: true,
   },
   devtool: 'inline-source-map',
@@ -32,7 +33,11 @@ module.exports = {
           'style-loader',
           'css-loader',
         ],
-      }
+      },
+      {
+        test: /\.(png|jpg|jpeg|svg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [

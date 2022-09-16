@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "image": "sushi.jpg",
+      "author": "Derek Duran",
+      "origin": "unsplash"
+    },
+    {
+      "image": "sushi-2.jpg",
+      "author": "Fadya Azhary",
+      "origin": "unsplash"
+    },
+    {
+      "image": "sushi-3.jpg",
+      "author": "Andraz Lazic",
+      "origin": "unsplash"
+    }
+  ]
+}

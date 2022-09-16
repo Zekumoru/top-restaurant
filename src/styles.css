@@ -63,10 +63,11 @@ html > .content {
 
 .primary-nav {
   width: 100%;
-  padding: 16px 0;
-  top: 0;
+  padding: 18px 0 16px;
+  top: -2px; /* Fixes extra gap top */
   position: sticky;
   backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .primary-nav > :first-child {
@@ -83,4 +84,48 @@ html > .content {
 
 .primary-nav a:hover {
   text-decoration: underline;
+}
+
+section:first-of-type {
+  height: 600px;
+}
+
+section {
+  height: 768px;
+}
+
+section > :first-child {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.image, 
+section .content {
+  grid-row: 1 / -1;
+}
+
+.image {
+  width: 640px;
+  height: 420px;
+  overflow: hidden;
+  grid-column: 1 / 4;
+  position: relative;
+  border-radius: 160px 60px;
+}
+
+img {
+  width: 100%;
+  bottom: -200px;
+  position: absolute;
+}
+
+section .content {
+  grid-column: 3 / -1;
+  z-index: 10;
+  padding: 24px 30px;
+  background-color: var(--default-bg-color);
+  border-radius: 20px 40px;
 }

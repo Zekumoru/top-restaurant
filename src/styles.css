@@ -48,8 +48,7 @@ html > .content {
   --length: 30px;
   width: var(--length);
   height: var(--length);
-  background-image: url(https://cdn-icons-png.flaticon.com/512/3724/3724190.png);
-  /* <a href="https://www.flaticon.com/free-icons/onigiri" title="onigiri icons">Onigiri icons created by surang - Flaticon</a> */
+  background-image: url(./images/logo.png);
   background-size: 100%;
 }
 

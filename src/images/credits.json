@@ -1,4 +1,9 @@
 {
+  "logo": {
+    "image": "logo.png",
+    "author": "surang",
+    "origin": "flaticon"
+  },
   "images": [
     {
       "image": "sushi.jpg",

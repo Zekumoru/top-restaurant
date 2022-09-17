@@ -169,7 +169,7 @@ section .content {
 
 .section-2 .content {
   grid-column: 1 / 4;
-  border-radius: 80px 40px;
+  border-radius: 30px 40px 80px;
   transform: translateX(30px);
   padding-bottom: 40px;
 }

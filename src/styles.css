@@ -86,12 +86,14 @@ html > .content {
   text-decoration: underline;
 }
 
+/* MAIN CONTENT */
+
 section:first-of-type {
   height: 600px;
 }
 
 section {
-  height: 768px;
+  height: 800px;
 }
 
 section > :first-child {
@@ -102,30 +104,106 @@ section > :first-child {
   padding: 40px;
 }
 
-.image, 
-section .content {
+section .content,
+.image-container {
   grid-row: 1 / -1;
 }
 
-.image {
-  width: 640px;
-  height: 420px;
-  overflow: hidden;
-  grid-column: 1 / 4;
-  position: relative;
-  border-radius: 160px 60px;
-}
-
-img {
-  width: 100%;
-  bottom: -200px;
+section img {
   position: absolute;
 }
 
 section .content {
-  grid-column: 3 / -1;
   z-index: 10;
-  padding: 24px 30px;
+  padding: 24px 36px;
   background-color: var(--default-bg-color);
+}
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.section-1 .image-container {
+  width: 640px;
+  height: 420px;
+  grid-column: 1 / 4;
+  border-radius: 160px 60px;
+}
+
+.section-1 img {
+  width: 100%;
+  bottom: -200px;
+}
+
+.section-1 .content {
+  grid-column: 3 / -1;
   border-radius: 20px 40px;
+  padding-bottom: 32px;
+}
+
+.section-2 .image-container {
+  width: 420px;
+  height: 620px;
+  grid-column: 3 / -1;
+  border-radius: 60px 120px;
+}
+
+.section-2 img {
+  height: 100%;
+  left: -28px;
+}
+
+.section-2 .content {
+  grid-column: 1 / 4;
+  border-radius: 80px 40px;
+  transform: translateX(30px);
+  padding-bottom: 40px;
+}
+
+.section-2 h2 {
+  padding-left: 6px;
+}
+
+.hours-table {
+  text-align: left;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 4px 24px 4px 4px;
+}
+
+.hours-table th:last-child,
+.hours-table td:last-child {
+  padding: 4px;
+}
+
+.hours-table th[scope="row"] {
+  font-weight: 500;
+}
+
+.section-3 .image-container {
+  width: 640px;
+  height: 580px;
+  grid-column: 1 / 5;
+  border-radius: 200px 100px;
+  justify-self: start;
+  margin-left: 60px;
+}
+
+.section-3 img {
+  height: 100%;
+  left: -52px;
+}
+
+.section-3 .content {
+  grid-column: 3 / -1;
+  width: 300px;
+  border-radius: 30px 48px;
+  justify-self: start;
+  align-self: end;
+  margin-left: 120px;
+  margin-bottom: 176px;
+  padding: 24px 36px 30px;
 }

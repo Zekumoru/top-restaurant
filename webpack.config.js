@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Restaurant Page',
+      title: 'Sushi Sushi',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/template.html'),
     }),

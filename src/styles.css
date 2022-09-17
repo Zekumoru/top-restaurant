@@ -1,6 +1,7 @@
 :root {
   --default-bg-color: #18191a;
   --default-text-color: #e6e6e6;
+  --default-text-secondary-color: white;
 }
 
 * {
@@ -78,12 +79,24 @@ html > .content {
   gap: 12px;
 }
 
-.primary-nav a {
+.primary-nav button {
+  color: var(--default-text-color);
+  background-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.primary-nav a:hover {
+.primary-nav button:hover {
   text-decoration: underline;
+}
+
+.primary-nav button.current {
+  text-decoration: none;
+  color: var(--default-text-secondary-color);
+  cursor: default;
 }
 
 /* MAIN CONTENT */
@@ -234,7 +247,7 @@ footer p {
 
 footer a,
 footer .name {
-  color: #ffffff;
+  color: var(--default-text-secondary-color);
 }
 
 footer a:hover {

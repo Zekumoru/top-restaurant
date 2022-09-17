@@ -207,3 +207,36 @@ section .content {
   margin-bottom: 176px;
   padding: 24px 36px 30px;
 }
+
+/* FOOTER */
+
+footer {
+  padding-bottom: 80px;
+}
+
+footer > :first-child {
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+}
+
+footer .credits-container {
+  text-align: right;
+}
+
+footer h3 {
+  padding-bottom: 8px;
+}
+
+footer p {
+  padding-bottom: 4px;
+}
+
+footer a,
+footer .name {
+  color: #ffffff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

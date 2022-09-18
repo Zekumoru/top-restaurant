@@ -17,6 +17,11 @@ function create(tag, optionsOrClassName = {}, childrenOrTextContent = []) {
 
 function assign(element, options, children) {
   Object.assign(element, options);
+  if (!Array.isArray(children)) {
+    element.appendChild(children)
+    return element;
+  }
+
   children.forEach((child) => {
     if (typeof child === 'string') {
       element.appendChild(document.createTextNode(child));

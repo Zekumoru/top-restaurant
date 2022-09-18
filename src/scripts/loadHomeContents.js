@@ -1,6 +1,7 @@
 import ElementCreator from "./ElementCreator";
 import sushi from '../images/sushi.jpg';
 import sushi2 from '../images/sushi-2.jpg';
+import sushi3 from '../images/sushi-3.jpg';
 
 const images = [
   {
@@ -10,13 +11,23 @@ const images = [
   {
     src: sushi2,
     alt: 'board of mixed sushi',
-  }
+  },
+  {
+    src: sushi3,
+    alt: 'sushi, chopsticks, and a cup of soy sauce',
+  },
 ];
 
 export default function () {
   return [
-    createSection('section-1', images[0], createContent1()),
-    createSection('section-2', images[1], createContent2()),
+    createSection('section-1', images[0], createContent('Only The Best', [
+      createParagraph('All ingredients are carefully handpicked to give you the best of tastes.'),
+      createParagraph('Each sushi with a story of its own flavour to tell.'),
+    ])),
+    createSection('section-2', images[1], createContent('Hours', createHoursTable())),
+    createSection('section-3', images[2], createContent('Location', [
+      createParagraph('123 Sushi Street, Tokyo, Japan'),
+    ])),
   ];
 };
 
@@ -33,18 +44,11 @@ function createImageContainer(imageOptions) {
     ElementCreator.create('img', imageOptions));
 }
 
-function createContent1() {
+function createContent(heading, children = []) {
+  if (!Array.isArray(children)) children = [ children ];
   return ElementCreator.create('div', 'content', [
-    ElementCreator.create('h2', '', 'Only The Best'),
-    createParagraph('All ingredients are carefully handpicked to give you the best of tastes.'),
-    createParagraph('Each sushi with a story of its own flavour to tell.'),
-  ]);
-}
-
-function createContent2() {
-  return ElementCreator.create('div', 'content', [
-    ElementCreator.create('h2', '', 'Hours'),
-    createHoursTable(),
+    ElementCreator.create('h2', '', heading),
+    ...children,
   ]);
 }
 

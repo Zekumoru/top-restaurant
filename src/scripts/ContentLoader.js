@@ -2,6 +2,9 @@ export default {
   load,
   loadBefore,
   loadAfter,
+  loadMultiple,
+  loadBeforeMultiple,
+  loadAfterMultiple,
 };
 
 const content = document.querySelector('.content');
@@ -13,6 +16,10 @@ const elements = {
 function load(element, name = '') {
   if (name) elements[name] = element;
   content.append(element);
+}
+
+function loadMultiple(elements) {
+  elements.forEach((element) => load(element));
 }
 
 function loadBefore(before, element, name = '') {
@@ -27,6 +34,10 @@ function loadBefore(before, element, name = '') {
   elements[before].insertAdjacentElement('beforebegin', element);
 }
 
+function loadBeforeMultiple(before, elements) {
+  elements.forEach((element) => loadBefore(before, element));
+}
+
 function loadAfter(after, element, name = '') {
   if (name) elements[name] = element;
   
@@ -37,4 +48,8 @@ function loadAfter(after, element, name = '') {
 
   if (!elements[after]) throw TypeError(`Cannot load after '${after}' since it does not exist`);
   elements[after].insertAdjacentElement('afterend', element);
+}
+
+function loadAfterMultiple(after, elements) {
+  elements.forEach((element) => loadAfter(after, element));
 }

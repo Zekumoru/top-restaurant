@@ -4,7 +4,10 @@ export default {
 
 function create(tag, optionsOrClassName = {}, childrenOrTextContent = []) {
   if (typeof optionsOrClassName === 'string') {
-    optionsOrClassName = { className: optionsOrClassName };
+    const className = optionsOrClassName;
+    optionsOrClassName = {};
+
+    if (className) optionsOrClassName.className = className;
   }
 
   if (typeof childrenOrTextContent === 'string' || typeof childrenOrTextContent === 'number') {

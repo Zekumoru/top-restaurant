@@ -28,7 +28,7 @@ function loadMultiple(elements) {
   elements.forEach((element) => load(element));
 }
 
-function loadBefore(before, element, name = '') {
+function loadBefore(element, before, name = '') {
   if (name) elements[name] = element;
 
   if (before === 'content') {
@@ -40,11 +40,11 @@ function loadBefore(before, element, name = '') {
   elements[before].insertAdjacentElement('beforebegin', element);
 }
 
-function loadBeforeMultiple(before, elements) {
+function loadBeforeMultiple(elements, before) {
   elements.forEach((element) => loadBefore(before, element));
 }
 
-function loadAfter(after, element, name = '') {
+function loadAfter(element, after, name = '') {
   if (name) elements[name] = element;
   
   if (after === 'content') {
@@ -56,6 +56,6 @@ function loadAfter(after, element, name = '') {
   elements[after].insertAdjacentElement('afterend', element);
 }
 
-function loadAfterMultiple(after, elements) {
+function loadAfterMultiple(elements, after) {
   elements.forEach((element) => loadAfter(after, element));
 }

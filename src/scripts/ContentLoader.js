@@ -4,8 +4,8 @@ export default {
   loadBefore,
   loadAfter,
   loadMultiple,
-  loadBeforeMultiple,
-  loadAfterMultiple,
+  loadMultipleBefore,
+  loadMultipleAfter,
 };
 
 const content = document.querySelector('.content');
@@ -40,10 +40,6 @@ function loadBefore(element, before, name = '') {
   elements[before].insertAdjacentElement('beforebegin', element);
 }
 
-function loadBeforeMultiple(elements, before) {
-  elements.forEach((element) => loadBefore(before, element));
-}
-
 function loadAfter(element, after, name = '') {
   if (name) elements[name] = element;
   
@@ -56,6 +52,10 @@ function loadAfter(element, after, name = '') {
   elements[after].insertAdjacentElement('afterend', element);
 }
 
-function loadAfterMultiple(elements, after) {
-  elements.forEach((element) => loadAfter(after, element));
+function loadMultipleBefore(elements, before) {
+  elements.forEach((element) => loadBefore(element, before));
+}
+
+function loadMultipleAfter(elements, after) {
+  elements.forEach((element) => loadAfter(element, after));
 }

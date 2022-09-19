@@ -28,8 +28,19 @@ html {
   background-color: var(--default-bg-color);
 }
 
-html > .content {
-  position: relative;
+html,
+body,
+body > .content {
+  min-height: 100vh;
+}
+
+body > .content {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .flex-horizontal-center {

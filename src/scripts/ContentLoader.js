@@ -1,5 +1,6 @@
 export default {
   load,
+  loadFirst,
   loadBefore,
   loadAfter,
   loadMultiple,
@@ -16,6 +17,11 @@ const elements = {
 function load(element, name = '') {
   if (name) elements[name] = element;
   content.append(element);
+}
+
+function loadFirst(element, name = '') {
+  if (name) elements[name] = element;
+  content.prepend(element);
 }
 
 function loadMultiple(elements) {

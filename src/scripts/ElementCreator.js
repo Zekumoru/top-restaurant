@@ -1,6 +1,11 @@
 export default {
   create,
+  createText,
 };
+
+function createText(text) {
+  return document.createTextNode(text);
+}
 
 function create(tag, optionsOrClassName = {}, childrenOrTextContent = []) {
   if (typeof optionsOrClassName === 'string') {

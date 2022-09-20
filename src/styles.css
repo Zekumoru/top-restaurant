@@ -68,7 +68,7 @@ footer {
   padding: 24px 0 16px;
 }
 
-.primary-header > :first-child {
+.primary-header > .content-wrap {
   gap: 8px;
 }
 
@@ -82,7 +82,7 @@ footer {
   z-index: 100;
 }
 
-.primary-nav > :first-child {
+.primary-nav > .content-wrap {
   width: min(100%, 460px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -120,7 +120,7 @@ footer {
   height: 800px;
 }
 
-.home-section > :first-child {
+.home-section > .content-wrap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
@@ -238,7 +238,7 @@ footer {
   padding-bottom: 80px;
 }
 
-footer > :first-child {
+footer > .content-wrap {
   display: flex;
   padding: 0 60px;
   justify-content: space-between;

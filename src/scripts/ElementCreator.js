@@ -1,10 +1,32 @@
 export default {
   create,
   createText,
+  createLink,
+  createParagraph,
 };
 
 function createText(text) {
   return document.createTextNode(text);
+}
+
+function createLink(text, url) {
+  return create('a', {
+    href: url,
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  }, text);
+}
+
+function createParagraph(textOrNodes) {
+  if (typeof textOrNodes === 'string') return create('p', '', textOrNodes);
+
+  return create('p', '', [
+    ...textOrNodes.map((node) => {
+      if (typeof node !== 'string') return node;
+      if (typeof node !== 'number') return node;
+      return createText(node);
+    }),
+  ]);
 }
 
 function create(tag, optionsOrClassName = {}, childrenOrTextContent = []) {

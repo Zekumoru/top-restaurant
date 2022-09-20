@@ -7,6 +7,9 @@ import nigiriSuzuki from '../images/nigiri-suzuki.jpg';
 import uramakiSake from '../images/uramaki-sake.jpg';
 import uramakiEbi from '../images/uramaki-ebi.jpg';
 import uramakiRobusuta from '../images/uramaki-robusuta.jpg';
+import hosomakiSake from '../images/hosomaki-sake.jpg';
+import hosomakiMaguro from '../images/hosomaki-maguro.jpg';
+import hosomakiEbi from '../images/hosomaki-ebi.jpg';
 
 const images = {
   nigiri: {
@@ -18,6 +21,11 @@ const images = {
     sake: new ProductImage(uramakiSake, '8 pieces of uramaki sake', '200%', '-20px', '-75px'),
     ebi: new ProductImage(uramakiEbi, '8 pieces of uramaki ebi', '200%', '-21px', '-47px'),
     robusuta: new ProductImage(uramakiRobusuta, '8 pieces of uramaki robusuta', '170%', '-4px', '-70px'),
+  },
+  hosomaki: {
+    sake: new ProductImage(hosomakiSake, '8 pieces of hosomaki sake', '240%', '-27px', '-74px'),
+    maguro: new ProductImage(hosomakiMaguro, '8 pieces of hosomaki maguro', '220%', '-46px', '-110px'),
+    ebi: new ProductImage(hosomakiEbi, '8 pieces of hosomaki ebi', '190%', '-29px', '-136px'),
   },
 }
 
@@ -32,12 +40,18 @@ const products = {
     new Product(images.uramaki.ebi, 'Ebi', 'Shrimp', 'A cylindrical nori-hidden sushi with a cooked cut of shrimp on top.', 1399.99, 8),
     new Product(images.uramaki.robusuta, 'Robusuta', 'Lobster', 'A cylindrical nori-hidden sushi with crushed flesh of lobster on top.', 1799.99, 8),
   ],
+  hosomaki: [
+    new Product(images.hosomaki.sake, 'Sake', 'Salmon', 'A cylindrical sushi with fresh salmon inside.', 1099.99, 8),
+    new Product(images.hosomaki.maguro, 'Maguro', 'Tuna', 'A cylindrical sushi with tuna inside.', 1099.99, 8),
+    new Product(images.hosomaki.ebi, 'Ebi', 'Shrimp', 'A cylindrical sushi with shrimp inside.', 1199.99, 8),
+  ],
 };
 
 export default function () {
   return [
     createSection('Nigirizushi', 'Hand-pressed sushi', createProducts(products.nigiri)),
     createSection('Uramaki', 'Inside-out roll', createProducts(products.uramaki)),
+    createSection('Hosomaki', 'Thin roll', createProducts(products.hosomaki)),
   ];
 };
 

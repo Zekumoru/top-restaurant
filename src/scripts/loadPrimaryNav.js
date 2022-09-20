@@ -1,8 +1,17 @@
 import ElementCreator from "./ElementCreator";
 
-export default function (currentTab = 'home') {
+export default function (currentTab, buttonOnClickListeners) {
   const primaryNav = ElementCreator.create('nav', 'primary-nav', createContent());
   primaryNav.querySelector(`.${currentTab}`).classList.add('current');
+
+  Object.entries(buttonOnClickListeners).forEach(([button, listener]) => {
+    primaryNav.querySelector(`.${button}`).addEventListener('click', (e) => {
+      primaryNav.querySelector('button.current').classList.remove('current');
+      e.target.classList.add('current');
+      listener(e);
+    });
+  });
+  
   return primaryNav;
 };
 

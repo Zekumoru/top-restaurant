@@ -4,20 +4,40 @@ import ProductImage from "./ProductImage";
 import nigiriSake from '../images/nigiri-sake.jpg';
 import nigiriMaguro from '../images/nigiri-maguro.jpg';
 import nigiriSuzuki from '../images/nigiri-suzuki.jpg';
+import uramakiSake from '../images/uramaki-sake.jpg';
+import uramakiEbi from '../images/uramaki-ebi.jpg';
+import uramakiRobusuta from '../images/uramaki-robusuta.jpg';
 
-const nigiriSakeImage = new ProductImage(nigiriSake, '2 pieces of nigiri sake', '240%', '-58px', '-200px');
-const nigiriMaguroImage = new ProductImage(nigiriMaguro, '4 pieces of nigiri maguro', '180%', '-18px', '-58px');
-const nigiriSuzukiImage = new ProductImage(nigiriSuzuki, '4 pieces of nigiri suzuki', '200%', '-16px', '-94px');
+const images = {
+  nigiri: {
+    sake: new ProductImage(nigiriSake, '2 pieces of nigiri sake', '240%', '-58px', '-200px'),
+    maguro: new ProductImage(nigiriMaguro, '4 pieces of nigiri maguro', '180%', '-18px', '-58px'),
+    suzuki: new ProductImage(nigiriSuzuki, '4 pieces of nigiri suzuki', '200%', '-16px', '-94px'),
+  },
+  uramaki: {
+    sake: new ProductImage(uramakiSake, '8 pieces of uramaki sake', '200%', '-20px', '-75px'),
+    ebi: new ProductImage(uramakiEbi, '8 pieces of uramaki ebi', '200%', '-21px', '-47px'),
+    robusuta: new ProductImage(uramakiRobusuta, '8 pieces of uramaki robusuta', '170%', '-4px', '-70px'),
+  },
+}
 
-const nigiriProducts = [
-  new Product(nigiriSakeImage, 'Sake', 'Salmon', 'A long white oval-shaped sushi with a cut of fresh salmon on top.', 1199.99, 8),
-  new Product(nigiriMaguroImage, 'Maguro', 'Tuna', 'A long white oval-shaped sushi with slices of tuna on top.', 1199.99, 8),
-  new Product(nigiriSuzukiImage, 'Suzuki', 'Japanese sea bass', 'A long white oval-shaped sushi with slices of Japanese sea bass on top.', 1199.99, 8),
-];
+const products = {
+  nigiri: [
+    new Product(images.nigiri.sake, 'Sake', 'Salmon', 'A long white oval-shaped sushi with a cut of fresh salmon on top.', 1199.99, 8),
+    new Product(images.nigiri.maguro, 'Maguro', 'Tuna', 'A long white oval-shaped sushi with slices of tuna on top.', 1199.99, 8),
+    new Product(images.nigiri.suzuki, 'Suzuki', 'Japanese sea bass', 'A long white oval-shaped sushi with slices of Japanese sea bass on top.', 1199.99, 8),  
+  ],
+  uramaki: [
+    new Product(images.uramaki.sake, 'Sake', 'Salmon', 'A cylindrical nori-hidden sushi with crushed fresh salmon on top.', 1399.99, 8),
+    new Product(images.uramaki.ebi, 'Ebi', 'Shrimp', 'A cylindrical nori-hidden sushi with a cooked cut of shrimp on top.', 1399.99, 8),
+    new Product(images.uramaki.robusuta, 'Robusuta', 'Lobster', 'A cylindrical nori-hidden sushi with crushed flesh of lobster on top.', 1799.99, 8),
+  ],
+};
 
 export default function () {
   return [
-    createSection('Nigirizushi', 'Hand-pressed Sushi', createProducts(nigiriProducts)),
+    createSection('Nigirizushi', 'Hand-pressed sushi', createProducts(products.nigiri)),
+    createSection('Uramaki', 'Inside-out roll', createProducts(products.uramaki)),
   ];
 };
 

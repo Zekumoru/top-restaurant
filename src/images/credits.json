@@ -21,7 +21,11 @@
       "origin": "unsplash"
     },
     {
-      "image": "nigiri-sake.jpg",
+      "images": [
+        "nigiri-sake.jpg",
+        "nigiri-maguro.jpg",
+        "nigiri-suzuki.jpg"
+      ],
       "author": "MANGA",
       "origin": "mangarestaurant"
     }

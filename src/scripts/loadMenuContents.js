@@ -2,11 +2,17 @@ import ElementCreator from "./ElementCreator";
 import Product from "./Product";
 import ProductImage from "./ProductImage";
 import nigiriSake from '../images/nigiri-sake.jpg';
+import nigiriMaguro from '../images/nigiri-maguro.jpg';
+import nigiriSuzuki from '../images/nigiri-suzuki.jpg';
 
 const nigiriSakeImage = new ProductImage(nigiriSake, '2 pieces of nigiri sake', '240%', '-58px', '-200px');
+const nigiriMaguroImage = new ProductImage(nigiriMaguro, '4 pieces of nigiri maguro', '180%', '-18px', '-58px');
+const nigiriSuzukiImage = new ProductImage(nigiriSuzuki, '4 pieces of nigiri suzuki', '200%', '-16px', '-94px');
 
 const nigiriProducts = [
   new Product(nigiriSakeImage, 'Sake', 'Salmon', 'A long white oval-shaped sushi with a cut of fresh salmon on top.', 1199.99, 8),
+  new Product(nigiriMaguroImage, 'Maguro', 'Tuna', 'A long white oval-shaped sushi with slices of tuna on top.', 1199.99, 8),
+  new Product(nigiriSuzukiImage, 'Suzuki', 'Japanese sea bass', 'A long white oval-shaped sushi with slices of Japanese sea bass on top.', 1199.99, 8),
 ];
 
 export default function () {

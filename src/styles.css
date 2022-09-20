@@ -112,15 +112,15 @@ footer {
 
 /* MAIN CONTENT */
 
-section:first-of-type {
+.home-section:first-of-type {
   height: 600px;
 }
 
-section {
+.home-section {
   height: 800px;
 }
 
-section > :first-child {
+.home-section > :first-child {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
@@ -128,16 +128,16 @@ section > :first-child {
   padding: 40px;
 }
 
-section .content,
+.home-section .content,
 .image-container {
   grid-row: 1 / -1;
 }
 
-section img {
+.home-section img {
   position: absolute;
 }
 
-section .content {
+.home-section .content {
   z-index: 10;
   padding: 24px 36px;
   background-color: var(--default-bg-color);
@@ -148,44 +148,44 @@ section .content {
   position: relative;
 }
 
-.section-1 .image-container {
+.home-section-1 .image-container {
   width: 640px;
   height: 420px;
   grid-column: 1 / 4;
   border-radius: 160px 60px;
 }
 
-.section-1 img {
+.home-section-1 img {
   width: 100%;
   bottom: -200px;
 }
 
-.section-1 .content {
+.home-section-1 .content {
   grid-column: 3 / -1;
   border-radius: 20px 40px;
   padding-bottom: 32px;
 }
 
-.section-2 .image-container {
+.home-section-2 .image-container {
   width: 420px;
   height: 620px;
   grid-column: 3 / -1;
   border-radius: 60px 120px;
 }
 
-.section-2 img {
+.home-section-2 img {
   height: 100%;
   left: -28px;
 }
 
-.section-2 .content {
+.home-section-2 .content {
   grid-column: 1 / 4;
   border-radius: 30px 40px 80px;
   transform: translateX(30px);
   padding-bottom: 40px;
 }
 
-.section-2 h2 {
+.home-section-2 h2 {
   padding-left: 6px;
 }
 
@@ -207,7 +207,7 @@ section .content {
   font-weight: 500;
 }
 
-.section-3 .image-container {
+.home-section-3 .image-container {
   width: 640px;
   height: 580px;
   grid-column: 1 / 5;
@@ -216,12 +216,12 @@ section .content {
   margin-left: 60px;
 }
 
-.section-3 img {
+.home-section-3 img {
   height: 100%;
   left: -52px;
 }
 
-.section-3 .content {
+.home-section-3 .content {
   grid-column: 3 / -1;
   width: 300px;
   border-radius: 30px 48px;

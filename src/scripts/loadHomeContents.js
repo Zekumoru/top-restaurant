@@ -20,12 +20,12 @@ const images = [
 
 export default function () {
   return [
-    createSection('section-1', images[0], createContent('Only The Best', [
+    createSection('home-section home-section-1', images[0], createContent('Only The Best', [
       createParagraph('All ingredients are carefully handpicked to give you the best of tastes.'),
       createParagraph('Each sushi with a story of its own flavour to tell.'),
     ])),
-    createSection('section-2', images[1], createContent('Hours', createHoursTable())),
-    createSection('section-3', images[2], createContent('Location', [
+    createSection('home-section home-section-2', images[1], createContent('Hours', createHoursTable())),
+    createSection('home-section home-section-3', images[2], createContent('Location', [
       createParagraph('123 Sushi Street, Tokyo, Japan'),
     ])),
   ];

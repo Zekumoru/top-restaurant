@@ -6,6 +6,7 @@ export default {
   loadMultiple,
   loadMultipleBefore,
   loadMultipleAfter,
+  removeFrom,
 };
 
 const content = document.querySelector('.content');
@@ -58,4 +59,29 @@ function loadMultipleBefore(elements, before) {
 
 function loadMultipleAfter(elements, after) {
   elements.forEach((element) => loadAfter(element, after));
+}
+
+function removeFrom(fromName, toName = null, { includeFrom, includeTo } = { includeFrom: true, includeTo: false }) {
+  const finish = elements[fromName] ?? content.firstChild;
+  let current = content.lastChild;
+
+  if (toName) {
+    current = elements[toName];
+    if (!includeTo) current = current.previousElementSibling;
+  }
+
+  while (current !== finish) {
+    const toRemove = current;
+    
+    Object.entries(elements).forEach(([key, element]) => {
+      if (element === current) {
+        delete elements[key];
+      }
+    });
+
+    current = current.previousElementSibling;
+    toRemove.remove();
+  }
+
+  if (includeFrom) current.remove();
 }

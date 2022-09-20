@@ -8,5 +8,3 @@ import './styles.css';
 ContentLoader.loadFirst(loadPrimaryHeader(), 'primary-header');
 ContentLoader.loadAfter(loadPrimaryNav(), 'primary-header', 'primary-nav');
 ContentLoader.load(loadFooter(), 'footer')
-
-ContentLoader.loadMultipleAfter(loadHomeContents().reverse(), 'primary-nav');

@@ -49,9 +49,17 @@ footer {
   align-items: center;
 }
 
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .content-wrap {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 /* PRIMARY HEADER & NAV */
@@ -264,3 +272,46 @@ footer .name {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* MENU */
+
+.menu-section {
+  padding: 40px 0 80px;
+}
+
+.menu-section + .menu-section {
+  padding-top: 0;
+}
+
+.product {
+  height: 360px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 80px;
+  align-items: center;
+}
+
+.product .image-container {
+  width: 260px;
+  height: 260px;
+  background-color: steelblue;
+  border-radius: 80px 40px;
+}
+
+.menu-section:nth-of-type(even) .product:nth-of-type(odd) .image-container,
+.menu-section:nth-of-type(odd) .product:nth-of-type(even) .image-container {
+  border-radius: 40px 80px; 
+}
+
+.product .content {
+  grid-row: 1 / -1;
+  max-width: 640px;
+  padding-right: 80px;
+}
+
+.menu-section:nth-of-type(even) .product:nth-of-type(odd) .content,
+.menu-section:nth-of-type(odd) .product:nth-of-type(even) .content {
+  grid-column: 1;
+  padding: 0 0 0 80px;
+}
+

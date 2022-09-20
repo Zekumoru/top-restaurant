@@ -17,10 +17,10 @@ function createLink(text, url) {
   }, text);
 }
 
-function createParagraph(textOrNodes) {
-  if (typeof textOrNodes === 'string') return create('p', '', textOrNodes);
+function createParagraph(textOrNodes, optionsOrClassName) {
+  if (typeof textOrNodes === 'string') return create('p', optionsOrClassName, textOrNodes);
 
-  return create('p', '', [
+  return create('p', optionsOrClassName, [
     ...textOrNodes.map((node) => {
       if (typeof node !== 'string') return node;
       if (typeof node !== 'number') return node;

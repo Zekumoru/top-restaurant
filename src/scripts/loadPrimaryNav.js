@@ -6,6 +6,7 @@ export default function (currentTab, buttonOnClickListeners) {
 
   Object.entries(buttonOnClickListeners).forEach(([button, listener]) => {
     primaryNav.querySelector(`.${button}`).addEventListener('click', (e) => {
+      window.scrollTo(0, 0);
       primaryNav.querySelector('button.current').classList.remove('current');
       e.target.classList.add('current');
       listener(e);

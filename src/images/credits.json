@@ -19,6 +19,11 @@
       "image": "sushi-3.jpg",
       "author": "Andraz Lazic",
       "origin": "unsplash"
+    },
+    {
+      "image": "nigiri-sake.jpg",
+      "author": "MANGA",
+      "origin": "mangarestaurant"
     }
   ]
 }

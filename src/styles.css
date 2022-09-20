@@ -1,7 +1,8 @@
 :root {
   --default-bg-color: #18191a;
   --default-text-color: #e6e6e6;
-  --default-text-secondary-color: white;
+  --default-text-link-color: white;
+  --default-text-secondary-color: #b2b2b2;
 }
 
 * {
@@ -62,6 +63,15 @@ footer {
   padding: 0 40px;
 }
 
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+section img {
+  position: absolute;
+}
+
 /* PRIMARY HEADER & NAV */
 
 .logo {
@@ -114,7 +124,7 @@ footer {
 
 .primary-nav button.current {
   text-decoration: none;
-  color: var(--default-text-secondary-color);
+  color: var(--default-text-link-color);
   cursor: default;
 }
 
@@ -141,19 +151,10 @@ footer {
   grid-row: 1 / -1;
 }
 
-.home-section img {
-  position: absolute;
-}
-
 .home-section .content {
   z-index: 10;
   padding: 24px 36px;
   background-color: var(--default-bg-color);
-}
-
-.image-container {
-  overflow: hidden;
-  position: relative;
 }
 
 .home-section-1 .image-container {
@@ -266,7 +267,7 @@ footer p {
 
 footer a,
 footer .name {
-  color: var(--default-text-secondary-color);
+  color: var(--default-text-link-color);
 }
 
 footer a:hover {
@@ -294,7 +295,6 @@ footer a:hover {
 .product .image-container {
   width: 260px;
   height: 260px;
-  background-color: steelblue;
   border-radius: 80px 40px;
 }
 
@@ -315,3 +315,25 @@ footer a:hover {
   padding: 0 0 0 80px;
 }
 
+.product .product-name {
+  font-size: 1.8rem;
+}
+
+.product .english-name {
+  color: var(--default-text-secondary-color);
+}
+
+.product .description {
+  margin: 8px 0 16px;
+}
+
+.product .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.product .quantity {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--default-text-secondary-color);
+}

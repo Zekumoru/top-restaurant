@@ -30,7 +30,7 @@ export default function () {
     createSection('default-section-style home-section-3', images[2], createContent('Location', [
       ElementCreator.createParagraph('123 Sushi Street, Tokyo, Japan'),
     ])),
-  ];
+  ].reverse();
 };
 
 function createSection(className, imageOptions, content) {

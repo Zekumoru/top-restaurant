@@ -24,5 +24,5 @@ export default function () {
       images[1],
       createContent('Inquiries? Send us an e-mail!', ElementCreator.createParagraph('contact@sushisushi.sample')),
     ),
-  ];
+  ].reverse();
 };

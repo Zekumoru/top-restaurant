@@ -52,7 +52,7 @@ export default function () {
     createSection('Nigirizushi', 'Hand-pressed sushi', createProducts(products.nigiri)),
     createSection('Uramaki', 'Inside-out roll', createProducts(products.uramaki)),
     createSection('Hosomaki', 'Thin roll', createProducts(products.hosomaki)),
-  ];
+  ].reverse();
 };
 
 function createSection(title, description, products = []) {

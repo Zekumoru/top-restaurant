@@ -13,16 +13,16 @@ ContentLoader.load(loadFooter(), 'footer');
 ContentLoader.loadAfter(loadPrimaryNav('home', {
   home: () => {
     ContentLoader.removeFrom('primary-nav', 'footer', { includeFrom: false });
-    ContentLoader.loadMultipleAfter(loadHomeContents().reverse(), 'primary-nav');
+    ContentLoader.loadMultipleAfter(loadHomeContents(), 'primary-nav');
   },
   menu: () => {
     ContentLoader.removeFrom('primary-nav', 'footer', { includeFrom: false });
-    ContentLoader.loadMultipleAfter(loadMenuContents().reverse(), 'primary-nav');
+    ContentLoader.loadMultipleAfter(loadMenuContents(), 'primary-nav');
   },
   contact: () => {
     ContentLoader.removeFrom('primary-nav', 'footer', { includeFrom: false });
-    ContentLoader.loadMultipleAfter(loadContactContents().reverse(), 'primary-nav');
+    ContentLoader.loadMultipleAfter(loadContactContents(), 'primary-nav');
   },
 }), 'primary-header', 'primary-nav');
 
-ContentLoader.loadMultipleAfter(loadHomeContents().reverse(), 'primary-nav');
+ContentLoader.loadMultipleAfter(loadHomeContents(), 'primary-nav');

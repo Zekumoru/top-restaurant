@@ -18,6 +18,8 @@ const images = [
   },
 ];
 
+export { createSection, createImageContainer, createContent };
+
 export default function () {
   return [
     createSection('default-section-style home-section-1', images[0], createContent('Only The Best', [

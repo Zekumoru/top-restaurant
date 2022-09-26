@@ -31,16 +31,22 @@ function createCredits() {
       ElementCreator.createLink('surang', 'https://www.flaticon.com/authors/surang'),
     ]),
     ElementCreator.createParagraph([
-      'First sushi image by ',
+      'Home sushi images by ',
       ElementCreator.createLink('Derek Duran', 'https://unsplash.com/@derekduran'),
-    ]),
-    ElementCreator.createParagraph([
-      'Second sushi image by ',
+      ', ',
       ElementCreator.createLink('Fadya Azhary', 'https://unsplash.com/@fadsphoto23_'),
+      ', and ',
+      ElementCreator.createLink('Andraz Lazic', 'https://unsplash.com/@andrazlazic'),
     ]),
     ElementCreator.createParagraph([
-      'Third sushi image by ',
-      ElementCreator.createLink('Andraz Lazic', 'https://unsplash.com/@andrazlazic'),
+      'Menu sushi images by ',
+      ElementCreator.createLink('MANGA', 'https://www.mangarestaurant.it/'),
+    ]),
+    ElementCreator.createParagraph([
+      'Contact sushi images by ',
+      ElementCreator.createLink('STUDIOFOOD33', 'https://www.studiofood33.com'),
+      ' and ',
+      ElementCreator.createLink('Bladimir Garcia', 'https://unsplash.com/@bladimirgarcia'),
     ]),
   ]);
 }

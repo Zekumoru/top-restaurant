@@ -1,13 +1,15 @@
 import ElementCreator from "./ElementCreator";
 import { createSection, createImageContainer, createContent } from "./loadHomeContents";
+import sushiMix1 from '../images/sushi-mix-1.jpg';
+import sushiMix2 from '../images/sushi-mix-2.jpg';
 
 const images = [
   {
-    src: 'https://www.studiofood33.com/wp-content/uploads/2020/07/lezioni-di-sushi-torino-1.jpg',
+    src: sushiMix1,
     alt: 'diverse set of sushi',
   },
   {
-    src: 'https://www.volverviaggi.it/wp-content/uploads/2017/05/bladimir-garcia-YyVxoeJFBBY-unsplash.jpg',
+    src: sushiMix2,
     alt: 'diverse set of sushi',
   },
 ];

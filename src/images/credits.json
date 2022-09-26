@@ -21,10 +21,26 @@
       "origin": "unsplash"
     },
     {
+      "image": "sushi-mix-1.jpg",
+      "author": "STUDIOFOOD33",
+      "origin": "STUDIOFOOD33"
+    },
+    {
+      "image": "sushi-mix-2.jpg",
+      "author": "Bladimir Garcia",
+      "origin": "unsplash"
+    },
+    {
       "images": [
+        "hosomaki-ebi.jpg",
+        "hosomaki-maguro.jpg",
+        "hosomaki-sake.jpg",
         "nigiri-sake.jpg",
         "nigiri-maguro.jpg",
-        "nigiri-suzuki.jpg"
+        "nigiri-suzuki.jpg",
+        "uramaki-ebi.jpg",
+        "uramaki-robusuta.jpg",
+        "uramaki-sake.jpg"
       ],
       "author": "MANGA",
       "origin": "mangarestaurant"

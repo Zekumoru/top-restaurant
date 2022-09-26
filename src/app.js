@@ -5,6 +5,7 @@ import loadFooter from './scripts/loadFooter';
 import loadHomeContents from './scripts/loadHomeContents';
 import loadMenuContents from './scripts/loadMenuContents';
 import './styles.css';
+import loadContactContents from './scripts/loadContactContents';
 
 ContentLoader.loadFirst(loadPrimaryHeader(), 'primary-header');
 ContentLoader.load(loadFooter(), 'footer');
@@ -20,6 +21,7 @@ ContentLoader.loadAfter(loadPrimaryNav('home', {
   },
   contact: () => {
     ContentLoader.removeFrom('primary-nav', 'footer', { includeFrom: false });
+    ContentLoader.loadMultipleAfter(loadContactContents().reverse(), 'primary-nav');
   },
 }), 'primary-header', 'primary-nav');
 
